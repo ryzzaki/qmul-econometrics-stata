@@ -1,4 +1,4 @@
-Presentation for QMUL Econometrics I
+Presentation for QMUL Econometrics I <br>
 <b>
 Var descriptions: <br>
 </b>
