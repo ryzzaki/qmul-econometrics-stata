@@ -1,14 +1,16 @@
-// filter data on birthweight
-drop if birthweight > 5000 | birthweight < 2000
+// filter data on birthweight => dropping values to include only u + 3 s.d.
+graph twoway scatter birthweight educ
+count if birthweight > 5158 | birthweight < 1606
+drop if birthweight > 5158 | birthweight < 1606
 
 // question a
 gen higheduc = educ > 12
 
 // b.i)
-summarize if higheduc == 1
+summarize birthweight if higheduc == 1
 
 // b.ii)
-summarize if higheduc == 0
+summarize birthweight if higheduc == 0
 
 // question c
 // if condition is applied globally on the whole function - will not run if higheduc == 0
